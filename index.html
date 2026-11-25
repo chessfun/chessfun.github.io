@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineer — Profile</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --surface-color: #ffffff;
+            --text-primary: #111315;
+            --text-secondary: #4a5058;
+            --border-color: #d0d7de;
+            --accent-color: #0969da;
+            --status-bg: #dafbe1;
+            --status-border: #2da44e;
+            --status-text: #116329;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            background-color: var(--surface-color);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background-color: var(--status-bg);
+            border: 1px solid var(--status-border);
+            color: var(--status-text);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.25rem 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        section:last-of-type {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 0.75rem 1.5rem;
+        }
+
+        .grid-label {
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .grid-value {
+            color: var(--text-primary);
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-color);
+            padding: 0.2rem 0.6rem;
+            font-size: 0.85rem;
+        }
+
+        .tag.primary {
+            border-color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        ul.exp-list {
+            list-style: none;
+        }
+
+        ul.exp-list li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        ul.exp-list li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: var(--text-secondary);
+            font-weight: bold;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            border-bottom-color: var(--accent-color);
+        }
+
+        footer {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.5rem;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 0.25rem;
+            }
+            .grid-label {
+                margin-top: 0.75rem;
+            }
+            .grid-label:first-child {
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="header-top">
+            <h1>First Last</h1>
+            <span class="status-badge">Open to opportunities</span>
+        </div>
+        <div class="subtitle">Software Engineer</div>
+    </header>
+
+    <section>
+        <h2>About &amp; Job Search Focus</h2>
+        <p>
+            I build reliable backend and systems software with hands-on experience in low-level computation and relational databases.
+        </p>
+        <p>
+            Actively looking for a new role, primarily focused on <strong>Python</strong> development. Also ready to work with <strong>Erlang</strong>.
+        </p>
+    </section>
+
+    <section>
+        <h2>Tech Stack</h2>
+        <div class="grid">
+            <div class="grid-label">Core Languages</div>
+            <div class="grid-value">
+                <div class="tag-list">
+                    <span class="tag primary">Python</span>
+                    <span class="tag primary">C</span>
+                    <span class="tag primary">C++</span>
+                </div>
+            </div>
+
+            <div class="grid-label">Ready to Work With</div>
+            <div class="grid-value">
+                <div class="tag-list">
+                    <span class="tag">Erlang</span>
+                </div>
+            </div>
+
+            <div class="grid-label">Databases &amp; Tools</div>
+            <div class="grid-value">
+                <div class="tag-list">
+                    <span class="tag">OracleDB</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">Delphi</span>
+                </div>
+            </div>
+
+            <div class="grid-label">Libraries</div>
+            <div class="grid-value">
+                <div class="tag-list">
+                    <span class="tag">libGMP</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Experience &amp; Competencies</h2>
+        <ul class="exp-list">
+            <li><strong>C + libGMP:</strong> implementing algorithms and high-precision mathematical computations using arbitrary-precision arithmetic.</li>
+            <li><strong>OracleDB + Delphi:</strong> designing and tuning database queries, developing and maintaining client-server applications.</li>
+            <li><strong>Python &amp; C/C++:</strong> building utilities, automation tools, and clean, maintainable production code.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Contacts</h2>
+        <div class="grid">
+            <div class="grid-label">GitHub</div>
+            <div class="grid-value"><a href="https://github.com/chessfun" target="_blank" rel="noopener noreferrer">github</a></div>
+<!--
+            <div class="grid-label">Email</div>
+            <div class="grid-value"><a href="mailto:user@example.com">user@example.com</a></div>
+	    -->
+        </div>
+    </section>
+
+    <footer>
+        <span>HTML5 / CSS3 — No JS</span>
+        <span>2026</span>
+    </footer>
+</div>
+
+</body>
+</html>
